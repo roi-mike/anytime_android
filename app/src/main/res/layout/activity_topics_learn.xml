@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".pages.TopicsLearnActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:elevation="100dp"
+            android:background="@color/transparent"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_alignParentTop="true"
+            >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/logoanytime"
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/logoanytime"
+                android:layout_alignParentLeft="true"
+                />
+
+            <ImageView
+                android:id="@+id/iconaccount"
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@drawable/iconaccount"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent"
+        android:elevation="90dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="40dp"
+                android:background="@color/teal_200"
+                android:layout_height="100dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 "/>
+            </RelativeLayout>
+
+
+
+
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>
