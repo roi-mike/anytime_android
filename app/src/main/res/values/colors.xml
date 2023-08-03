@@ -9,6 +9,6 @@
     <color name="white">#FFFFFFFF</color>
 
 
-
+    <!---Couleur transparant les 2er chiffre apres le # c est l opacité (alpha)-->
     <color name="transparent">#90000000</color>
 </resources>
