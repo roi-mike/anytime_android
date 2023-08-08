@@ -47,8 +47,6 @@ public class TopicsLearnActivity extends AppCompatActivity {
         Log.d("START", "onCreate: START");
 
 
-
-
     }
 
     @Override
