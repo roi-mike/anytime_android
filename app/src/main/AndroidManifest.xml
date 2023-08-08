@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Anytime"
         tools:targetApi="31">
         <activity
+            android:name=".pages.EditProfilActivity"
+            android:exported="false" />
+        <activity
             android:name=".pages.ProfilActivity"
             android:exported="false" />
         <activity
