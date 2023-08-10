@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".pages.RegisterActivity">
+    tools:context=".pages.LoginActivity">
 
     <TextView
         android:id="@+id/titleconnecttxt"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Inscription"
+        android:text="Connexion"
         android:textStyle="bold"
         android:gravity="center"
         android:textSize="30dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:textColor="@color/grey"
         />
 
@@ -24,51 +24,27 @@
         android:layout_below="@+id/titleconnecttxt"
         >
         <EditText
-            android:id="@+id/f_nametxt"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Nom"
-            android:layout_marginTop="20dp"
-            />
-        <EditText
-            android:id="@+id/l_nametxt"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="Prénom"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/f_nametxt"
-            />
-        <EditText
             android:id="@+id/emailtxt"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="E-mail"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/l_nametxt"
             />
         <EditText
             android:id="@+id/passwordtxt"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Mot de passe"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="50dp"
             android:layout_below="@+id/emailtxt"
             />
-        <EditText
-            android:id="@+id/confpasswordtxt"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="E-mail"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/passwordtxt"
-            />
         <Button
-            android:id="@+id/registerbtn"
+            android:id="@+id/loginbtn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="Connexion"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/confpasswordtxt"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/passwordtxt"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@color/btngreen"
@@ -76,14 +52,20 @@
             />
 
         <TextView
-            android:id="@+id/loginbtn"
+            android:id="@+id/registerbtn"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:gravity="center"
-            android:text="Vous avez déja un compte (connection)"
+            android:text="Créer un compte (Inscription)"
             android:textColor="@color/blue"
-            android:layout_below="@+id/registerbtn"
+            android:layout_below="@+id/loginbtn"
             />
+
     </RelativeLayout>
+
+
+
+
+
 
 </RelativeLayout>

@@ -36,7 +36,7 @@
             android:name=".pages.ForgetPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".pages.ConnectionActivity"
+            android:name=".pages.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".pages.RegisterActivity"
