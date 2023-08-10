@@ -124,19 +124,20 @@ public class TopicsLearnActivity extends AppCompatActivity {
     }
 
     private void menubaranimation(){
+        final int initialHeight = relativeLayout.getHeight();
         final int targetHeight = initialHeight * 2;
+
             ValueAnimator anim = ValueAnimator.ofInt(initialHeight, targetHeight);
             anim.setDuration(1500);
             anim.setInterpolator(new AccelerateDecelerateInterpolator());
             anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
                 @Override
                 public void onAnimationUpdate(ValueAnimator animation) {
-                    int currentHeight = relativeLayout.getHeight();
-                    if (currentHeight != initialHeight) {
+                    int height = (int) animation.getAnimatedValue();
                         RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) relativeLayout.getLayoutParams();
-                        layoutParams.height = initialHeight;
+                        layoutParams.height = height;
                         relativeLayout.setLayoutParams(layoutParams);
-                    }
+                        Log.d("TAILLE 1: ", "TAILLE 1: "+height);
                 }
             });
             anim.addListener(new AnimatorListenerAdapter() {
@@ -147,6 +148,7 @@ public class TopicsLearnActivity extends AppCompatActivity {
                 }
             });
             anim.start();
+
     }
 
 }
