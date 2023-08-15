@@ -54,7 +54,6 @@ public class TopicsLearnActivity extends AppCompatActivity {
         profileImageView = findViewById(R.id.profileImageView); // ENUM
         loginbtn = findViewById(R.id.loginbtn);
 
-
         listverb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,13 +69,6 @@ public class TopicsLearnActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
-
-
-
         loginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -108,10 +100,6 @@ public class TopicsLearnActivity extends AppCompatActivity {
         });
 
 
-
-        Log.d("START", "onCreate: START");
-
-
     }
 
     @Override
@@ -119,36 +107,41 @@ public class TopicsLearnActivity extends AppCompatActivity {
         super.onWindowFocusChanged(hasFocus);
         if (hasFocus) {
             menubaranimation();
-            Log.d("FINISH", "onCreate: FINISH");
         }
     }
 
-    private void menubaranimation(){
+    private void menubaranimation() {
         final int initialHeight = relativeLayout.getHeight();
         final int targetHeight = initialHeight * 2;
 
-            ValueAnimator anim = ValueAnimator.ofInt(initialHeight, targetHeight);
-            anim.setDuration(1500);
-            anim.setInterpolator(new AccelerateDecelerateInterpolator());
-            anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    int height = (int) animation.getAnimatedValue();
-                        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) relativeLayout.getLayoutParams();
-                        layoutParams.height = height;
-                        relativeLayout.setLayoutParams(layoutParams);
-                        Log.d("TAILLE 1: ", "TAILLE 1: "+height);
-                }
-            });
-            anim.addListener(new AnimatorListenerAdapter() {
-                @Override
-                public void onAnimationEnd(Animator animation) {
-                    // Animation finished
-                    Log.d("FINSH ANIMATION", "onAnimationEnd: ANIMATION FINI");
-                }
-            });
-            anim.start();
+        ValueAnimator anim = ValueAnimator.ofInt(initialHeight, targetHeight);
+        anim.setDuration(1500);
+        anim.setInterpolator(new AccelerateDecelerateInterpolator());
+        anim.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                int newHeight = (int) animation.getAnimatedValue();
+                RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) relativeLayout.getLayoutParams();
+                layoutParams.height = newHeight;
+                relativeLayout.setLayoutParams(layoutParams);
 
+                if (newHeight > 368) {
+                    anim.cancel();
+                    menubaranimation();
+                }
+            }
+        });
+        anim.addListener(new AnimatorListenerAdapter() {
+            @Override
+            public void onAnimationEnd(Animator animation) {
+                if (relativeLayout.getHeight() > 368) {
+                    RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) relativeLayout.getLayoutParams();
+                    layoutParams.height = initialHeight;
+                    relativeLayout.setLayoutParams(layoutParams);
+                }
+            }
+        });
+        anim.start();
     }
 
 }
