@@ -1,26 +1,23 @@
 package com.example.anytime.interfaces;
 
 public class RegisterInterface {
-    private String f_nametxt;
-    private  String l_nametxt;
-    private  String emailtxt;
-    private  String passwordtxt;
-    private String confpasswordtxt;
+    private String first_name;
+    private  String last_name;
+    private  String email;
+    private  String password;
 
-    public RegisterInterface(String f_nametxt, String l_nametxt, String emailtxt, String passwordtxt, String confpasswordtxt){
-        this.f_nametxt = f_nametxt;
-        this.l_nametxt = l_nametxt;
-        this.emailtxt = emailtxt;
-        this.passwordtxt = passwordtxt;
-        this.confpasswordtxt = confpasswordtxt;
+    public RegisterInterface(String f_nametxt, String l_nametxt, String emailtxt, String passwordtxt){
+        this.first_name = f_nametxt;
+        this.last_name = l_nametxt;
+        this.email = emailtxt;
+        this.password = passwordtxt;
     }
 
     public  boolean validateRegister(RegisterInterface registerInterface){
         if (registerInterface.getF_nametxt() != null && !registerInterface.getF_nametxt().isEmpty() &&
                 registerInterface.getL_nametxt() != null && !registerInterface.getL_nametxt().isEmpty() &&
                 registerInterface.getEmailtxt() != null && !registerInterface.getEmailtxt().isEmpty() &&
-                registerInterface.getPasswordtxt() != null && !registerInterface.getPasswordtxt().isEmpty() &&
-                registerInterface.getConfpasswordtxt() != null && ! registerInterface.getConfpasswordtxt().isEmpty()
+                registerInterface.getPasswordtxt() != null && !registerInterface.getPasswordtxt().isEmpty()
         ){
             return true;
         }
@@ -29,35 +26,29 @@ public class RegisterInterface {
     }
 
     public String getF_nametxt(){
-        return f_nametxt;
+        return first_name;
     }
 
     public void setF_name(String f_nametxt){
-        this.f_nametxt = f_nametxt;
+        this.first_name = f_nametxt;
     }
 
     public  String getL_nametxt(){
-        return l_nametxt;
+        return last_name;
     }
     public void setL_nametxt(String l_nametxt){
-        this.l_nametxt = l_nametxt;
+        this.last_name = l_nametxt;
     }
     public String getEmailtxt(){
-        return emailtxt;
+        return email;
     }
     public void setEmailtxt(String emailtxt){
-        this.emailtxt = emailtxt;
+        this.email = emailtxt;
     }
     public String getPasswordtxt(){
-        return passwordtxt;
+        return password;
     }
     public void setPasswordtxt(String passwordtxt){
-        this.passwordtxt = passwordtxt;
-    }
-    public String getConfpasswordtxt(){
-        return confpasswordtxt;
-    }
-    public void setConfpasswordtxt(String confpasswordtxt){
-        this.confpasswordtxt = confpasswordtxt;
+        this.password = passwordtxt;
     }
 }

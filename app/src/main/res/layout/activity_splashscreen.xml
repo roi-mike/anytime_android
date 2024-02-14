@@ -4,19 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".pages.SplashscreenActivity">
 
-    <TextView
-        android:id="@+id/textView"
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Splash Screen"
-        android:textSize="85dp"
-        android:textColor="@color/black"
-        android:gravity="center"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="133dp"
-        tools:layout_editor_absoluteY="294dp" />
+        android:src="@drawable/aazomblogo012024"
+        />
 
 
 </LinearLayout>

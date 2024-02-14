@@ -24,43 +24,35 @@
         android:layout_below="@+id/titleconnecttxt"
         >
         <EditText
-            android:id="@+id/f_nametxt"
+            android:id="@+id/first_name"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Nom"
             android:layout_marginTop="20dp"
             />
         <EditText
-            android:id="@+id/l_nametxt"
+            android:id="@+id/last_name"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Prénom"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/f_nametxt"
+            android:layout_below="@+id/first_name"
             />
         <EditText
-            android:id="@+id/emailtxt"
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="E-mail"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/l_nametxt"
+            android:layout_below="@+id/last_name"
             />
         <EditText
-            android:id="@+id/passwordtxt"
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="Mot de passe"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/emailtxt"
-            />
-        <EditText
-            android:id="@+id/confpasswordtxt"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="E-mail"
-            android:layout_marginTop="20dp"
-            android:layout_below="@+id/passwordtxt"
+            android:layout_below="@+id/email"
             />
         <Button
             android:id="@+id/registerbtn"
@@ -68,7 +60,7 @@
             android:layout_height="50dp"
             android:text="Connexion"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/confpasswordtxt"
+            android:layout_below="@+id/password"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="@color/btngreen"
@@ -83,6 +75,16 @@
             android:text="Vous avez déja un compte (connection)"
             android:textColor="@color/blue"
             android:layout_below="@+id/registerbtn"
+            />
+
+        <TextView
+            android:id="@+id/homebtn"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text="Retour a l'accueil (Accueil)"
+            android:textColor="@color/blue"
+            android:layout_below="@+id/loginbtn"
             />
     </RelativeLayout>
 

@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.anytime.R;
 import com.example.anytime.interfaces.RegisterInterface;
+import com.example.anytime.services.AuthenticationServices;
 import com.example.anytime.socket.SocketManager;
 import com.google.gson.Gson;
 
@@ -26,11 +27,10 @@ public class RegisterActivity extends AppCompatActivity {
 
     //ID Formulaire
 
-    EditText f_nametxt;
-    EditText l_nametxt;
-    EditText emailtxt;
-    EditText passwordtxt;
-    EditText confpasswordtxt;
+    EditText first_name;
+    EditText last_name;
+    EditText email;
+    EditText password;
 
     RegisterInterface registerInterface;
 
@@ -38,6 +38,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private Button registerbtn;
     private TextView loginbtn;
+    private TextView homebtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,11 +46,10 @@ public class RegisterActivity extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         //init form
-        f_nametxt = (EditText) findViewById(R.id.f_nametxt);
-        l_nametxt = (EditText) findViewById(R.id.l_nametxt);
-        emailtxt = (EditText) findViewById(R.id.emailtxt);
-        passwordtxt = (EditText) findViewById(R.id.passwordtxt);
-        confpasswordtxt = (EditText) findViewById(R.id.confpasswordtxt);
+        first_name = (EditText) findViewById(R.id.first_name);
+        last_name = (EditText) findViewById(R.id.last_name);
+        email = (EditText) findViewById(R.id.email);
+        password = (EditText) findViewById(R.id.password);
 
 
         socketManager = SocketManager.getInstance();
@@ -59,14 +59,17 @@ public class RegisterActivity extends AppCompatActivity {
 
         registerbtn = findViewById(R.id.registerbtn);
         loginbtn = findViewById(R.id.loginbtn);
+        homebtn = findViewById(R.id.homebtn);
 
         registerbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d("CLIKREGISTER", "onClick: SUR REGISTER");
 
+                AuthenticationServices authenticationServices = new AuthenticationServices();
+
                 //Validation formulaire
-                registerInterface = new RegisterInterface(f_nametxt.getText().toString(),l_nametxt.getText().toString(),emailtxt.getText().toString(),passwordtxt.getText().toString(),confpasswordtxt.getText().toString());
+                registerInterface = new RegisterInterface(first_name.getText().toString(),last_name.getText().toString(),email.getText().toString(),password.getText().toString());
 
                 //parse avec le dependance Gson
                 Gson gson = new Gson();
@@ -75,7 +78,8 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if (registerInterface.validateRegister(registerInterface)){
                     Toast.makeText(RegisterActivity.this, "La validation est bon", Toast.LENGTH_SHORT).show();
-                    socketManager.emitEvent("registerNewCustomer", new Object[]{json});
+                    authenticationServices.savaregisternewcustomer(RegisterActivity.this,json);
+                    //socketManager.emitEvent("registerNewCustomer", new Object[]{json});
                 }else {
                     Toast.makeText(RegisterActivity.this, "Faux pas bon !", Toast.LENGTH_SHORT).show();
                 }
@@ -116,6 +120,14 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        homebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RegisterActivity.this, TopicsLearnActivity.class);
                 startActivity(intent);
             }
         });

@@ -5,7 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/topicslearnactivityrelativelayout"
     tools:context=".pages.TopicsLearnActivity">
+
+
 
     <RelativeLayout
         android:id="@+id/menubarelement"
@@ -18,10 +21,10 @@
 
         <ImageView
             android:id="@+id/logoapp"
-            android:layout_width="90dp"
+            android:layout_width="100dp"
             android:layout_height="70dp"
-            android:src="@drawable/logoapp"
-            android:layout_marginRight="25dp"
+            android:src="@drawable/aazomblogoname012024"
+            android:layout_marginRight="150dp"
             android:layout_alignParentLeft="true"
             android:layout_alignParentBottom="true"
             />
@@ -53,37 +56,144 @@
             android:gravity="center"
             />
 
-
-
     </RelativeLayout>
 
+
+
+
+
+<!-- 1er CONTENUE LIVRE...  -->
     <RelativeLayout
-        android:id="@+id/proposisionoffer"
+        android:id="@+id/firstLayoutProposision"
         android:layout_width="match_parent"
-        android:layout_height="450dp"
-        android:orientation="vertical"
+        android:layout_height="1.7in"
+        android:orientation="horizontal"
         android:layout_below="@id/menubarelement"
+        android:background="@color/teal_200"
         >
 
-        <ImageView
-            android:id="@+id/listverb"
-            android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:src="@drawable/listverbs"
-            android:contentDescription="voir la liste des verbes"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="55dp"
-            />
 
-        <ImageView
-            android:id="@+id/listbooks"
+        <RelativeLayout
+            android:id="@+id/firstLayoutProposisionRelativeLayoutVerbs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/design_default_color_primary">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/listverbCardView"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp">
+
+                <ImageView
+                    android:id="@+id/listverb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="55dp"
+                    android:contentDescription="voir la liste des verbes"
+                    android:src="@drawable/listverbs" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:text="Verbs"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/firstLayoutProposisionRelativeLayoutDiscution"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
-            android:src="@drawable/listbooks"
-            android:contentDescription="voir la liste des livres à lire"
-            android:layout_below="@id/listverb"
-            android:layout_marginTop="55dp"
-            />
+            android:layout_height="0.85in"
+            android:background="@color/btngreen"
+            android:layout_toRightOf="@+id/firstLayoutProposisionRelativeLayoutVerbs"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/listverbCardView2"
+                android:layout_width="160dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/listverb2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/listverbs"
+                    android:contentDescription="voir la liste des verbes"
+                    android:layout_alignParentTop="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:text="Discution"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:id="@+id/firstLayoutProposisionRelativeLayoutPodCast"
+            android:layout_width="match_parent"
+            android:layout_height="0.85in"
+            android:background="@color/purple_500"
+            android:layout_toRightOf="@+id/firstLayoutProposisionRelativeLayoutVerbs"
+            android:layout_below="@+id/firstLayoutProposisionRelativeLayoutDiscution"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/listverbCardView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/listverb3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/listverbs"
+                    android:contentDescription="voir la liste des verbes"
+                    android:layout_alignParentTop="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:text="PodCasts"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
     </RelativeLayout>
 
 
@@ -93,10 +203,135 @@
 
 
 
+    <!-- 2eme CONTENUE Books...  -->
+    <RelativeLayout
+        android:id="@+id/secondLayoutProposision"
+        android:layout_width="match_parent"
+        android:layout_height="1.7in"
+        android:orientation="horizontal"
+        android:layout_below="@id/firstLayoutProposision"
+        android:background="@color/btngreen"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/secondLayoutProposisionBooks"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/border_color"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="250dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                >
+
+                <ImageView
+                    android:id="@+id/listbooks"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/listbooks"
+                    android:contentDescription="voir la liste des livres à lire"
+                    android:layout_below="@id/listverb"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:text="Books"/>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
 
 
 
 
+        <RelativeLayout
+            android:id="@+id/secondLayoutProposisionSpeak"
+            android:layout_width="match_parent"
+            android:layout_height="0.85in"
+            android:background="@color/border_color"
+            android:layout_toEndOf="@+id/secondLayoutProposisionBooks"
+            >
+            <androidx.cardview.widget.CardView
+                android:id="@+id/listverbCardView2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                >
 
+                <ImageView
+                    android:id="@+id/listbooks2_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/listbooks"
+                    android:contentDescription="voir la liste des verbes"
+                    android:layout_alignParentTop="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:text="Speak"/>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/secondLayoutProposisioWriting"
+            android:layout_width="match_parent"
+            android:layout_height="0.85in"
+            android:background="@color/purple_500"
+            android:layout_toRightOf="@+id/secondLayoutProposisionBooks"
+            android:layout_below="@+id/secondLayoutProposisionSpeak"
+            >
+            <androidx.cardview.widget.CardView
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="20dp"
+                android:id="@+id/SecondLayoutProposisioWritingCardVie"
+                >
+
+                <ImageView
+                    android:id="@+id/secondLayoutProposisioWritingCardVieImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/listbooks"
+                    android:contentDescription="voir la liste des livres à lire"
+                    android:layout_alignParentTop="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:text="Writing"/>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </RelativeLayout>
 
 </RelativeLayout>
